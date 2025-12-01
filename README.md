@@ -1,7 +1,6 @@
 # FlowRibbon: Hypnotic AGSL Shader
 
 
-![Status](https://img.shields.io/badge/status-WIP-red)
 ![Platform](https://img.shields.io/badge/platform-Android-green?logo=android)
 ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=white)
 ![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?logo=android&logoColor=white)
