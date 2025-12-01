@@ -25,10 +25,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             FlowRibbonAGSLTheme {
                 //debug
-               // FlowRibbonDebug()
+                FlowRibbonDebug()
 
                 // real one !
-            //    /**
+                /**
 
                 FlowRibbonShader(
                 modifier = Modifier.fillMaxSize()
@@ -45,7 +45,7 @@ class MainActivity : ComponentActivity() {
                 rotationOverride = 0f,
                 timeSpeedOverride = 1.24f
                 )
-            //     */
+                 */
 
 
 
