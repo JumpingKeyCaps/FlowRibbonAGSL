@@ -4,18 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.draw.scale
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
-import com.lebaillyapp.flowribbonagsl.flowRibbon.FlowRibbonDebug
-import com.lebaillyapp.flowribbonagsl.flowRibbon.FlowRibbonShader
+import com.lebaillyapp.flowribbonagsl.flowRibbon.DemoFlowRibbonText
+
 import com.lebaillyapp.flowribbonagsl.ui.theme.FlowRibbonAGSLTheme
 
 class MainActivity : ComponentActivity() {
@@ -25,7 +15,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             FlowRibbonAGSLTheme {
                 //debug
-                FlowRibbonDebug()
+               // FlowRibbonDebug()
 
                 // real one !
                 /**
@@ -47,7 +37,8 @@ class MainActivity : ComponentActivity() {
                 )
                  */
 
-
+                //demo on text
+                DemoFlowRibbonText()
 
             }
         }
