@@ -31,9 +31,9 @@ The effect is achieved by combining sophisticated wave-based distortion with hig
 
 --
 
-| Render I | Render 2 | Render 3 | 
-|:---:|:---:|:---:|
-| ![P1](screenshots/demo1.gif) | ![P2a](screenshots/demo2.gif) |  ![P2a](screenshots/demo3.gif) |
+| Render Demo I | Debug composition | Render Demo II |  Text render | 
+|:---:|:---:|:---:|:---:|
+| ![P1](screenshots/demo1.gif) | ![P2](screenshots/demo2.gif) |  ![P3](screenshots/demo3.gif) |  ![P4](screenshots/demo4.gif) |
 
 
 ---
