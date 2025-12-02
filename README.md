@@ -34,7 +34,8 @@ The effect is achieved by combining sophisticated wave-based distortion with hig
 | Render Demo I | Render Demo II | Debug composition | Text Shadow | 
 |:---:|:---:|:---:|:---:|
 | ![P1](screenshots/demo1.gif) | ![P2](screenshots/demo2.gif) |  ![P3](screenshots/demo3.gif) |  ![P4](screenshots/demo4.gif) |
-
+|:---:|:---:|:---:|:---:|
+| ![P5](screenshots/demo5.gif) | ![P6](screenshots/demo6.gif) |  ![P7](screenshots/demo7.gif) |  ![P8](screenshots/demo8.gif) |
 
 ---
 
