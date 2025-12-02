@@ -4,7 +4,14 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Color
 import com.lebaillyapp.flowribbonagsl.flowRibbon.DemoFlowRibbonText
+import com.lebaillyapp.flowribbonagsl.flowRibbon.FlowRibbonDebug
+import com.lebaillyapp.flowribbonagsl.flowRibbon.FlowRibbonShader
 
 import com.lebaillyapp.flowribbonagsl.ui.theme.FlowRibbonAGSLTheme
 
@@ -15,11 +22,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             FlowRibbonAGSLTheme {
                 //debug
-               // FlowRibbonDebug()
+                FlowRibbonDebug()
 
                 // real one !
-                /**
 
+            /**
                 FlowRibbonShader(
                 modifier = Modifier.fillMaxSize()
                 .scale(1.0f)
@@ -33,12 +40,13 @@ class MainActivity : ComponentActivity() {
                 autoAnimate = true,
                 scaleOverride = 1.85f,
                 rotationOverride = 0f,
-                timeSpeedOverride = 1.24f
+                timeSpeedOverride = 1.24f,
+                animSpeedMultiplicator = 0.5f
                 )
-                 */
+            */
 
                 //demo on text
-                DemoFlowRibbonText()
+              //  DemoFlowRibbonText()
 
             }
         }

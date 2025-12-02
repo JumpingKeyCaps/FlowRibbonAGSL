@@ -32,8 +32,9 @@ fun FlowRibbonShader(
     microStrength: Float = 0.3f,
     autoAnimate: Boolean = true,
     scaleOverride: Float = 1f,
-    rotationOverride: Float = 0f,
-    timeSpeedOverride: Float = 1f
+    rotationOverride: Float = 1f,
+    timeSpeedOverride: Float = 1f,
+    animSpeedMultiplicator: Float = 1f
 ) {
     val context = LocalContext.current
     val shaderSource = remember {
@@ -66,12 +67,12 @@ fun FlowRibbonShader(
         if (w == 0f || h == 0f) return@Canvas
 
         // Correction du zoom : animation modifie offset/rotation seulement
-        val animatedRotation = if (autoAnimate) (time * 0.3f) % (2 * PI.toFloat()) else rotationOverride
+        val animatedRotation = if (autoAnimate) (time * 0.03) % (2 * PI.toFloat()) else rotationOverride
         val animatedScale = scaleOverride  // ne plus multiplier par sin(time) pour éviter zoom
 
         shader.apply {
             setColorUniform("u_Color", color.toArgb())
-            setFloatUniform("u_Time", time)
+            setFloatUniform("u_Time", time * animSpeedMultiplicator)
             setFloatUniform("u_DistortionStrength", distortionStrength)
             setFloatUniform("u_TimeSpeed", timeSpeedOverride)
             setFloatUniform("u_HighlightIntensity", highlightIntensity)
@@ -79,7 +80,7 @@ fun FlowRibbonShader(
             setFloatUniform("u_HorizontalMix", horizontalMix)
             setFloatUniform("u_MicroStrength", microStrength)
             setFloatUniform("u_Scale", animatedScale)
-            setFloatUniform("u_Rotation", animatedRotation)
+            setFloatUniform("u_Rotation", animatedRotation.toFloat())
             setFloatUniform("u_Resolution", floatArrayOf(w, h))
         }
 

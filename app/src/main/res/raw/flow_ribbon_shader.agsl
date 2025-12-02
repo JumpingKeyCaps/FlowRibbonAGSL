@@ -54,7 +54,7 @@ half4 main(float2 fragCoord) {
     float2 offset = ultimateDistortion(uv, u_Time);
     float2 distortedUV = uv + offset;
 
-    float reflection = ultimateReflection(distortedUV, u_Time);
+    float reflection = ultimateReflection(distortedUV, u_Time/2);
     float3 finalColor = float3(u_Color.rgb) * (reflection * 1.2 + 0.2);
 
     finalColor = pow(finalColor, float3(u_Gamma));

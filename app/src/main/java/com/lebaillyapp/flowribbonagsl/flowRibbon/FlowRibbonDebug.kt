@@ -41,8 +41,12 @@ fun FlowRibbonDebug() {
     var microStrength by remember { mutableStateOf(0.0f) }
     var scale by remember { mutableStateOf(2.28f) }
     var rotation by remember { mutableStateOf(0f) }
+    var animSpeed by remember { mutableStateOf(1f) }
 
     val color = Color.hsv(colorHue, 1f, 1f)
+
+
+
 
     Box(Modifier.fillMaxSize()) {
 
@@ -57,7 +61,8 @@ fun FlowRibbonDebug() {
             autoAnimate = isAnimating,
             scaleOverride = scale,
             rotationOverride = rotation,
-            timeSpeedOverride = timeSpeed
+            timeSpeedOverride = timeSpeed,
+            animSpeedMultiplicator = animSpeed
         )
 
         if (showControls) {
@@ -84,11 +89,11 @@ fun FlowRibbonDebug() {
                         10f
                     ) { distortionStrength = it }
                     ParameterSlider(
-                        "Time Speed",
-                        timeSpeed,
-                        0f,
+                        "Anim Speed",
+                        animSpeed,
+                        0.0f,
                         5f
-                    ) { timeSpeed = it }
+                    ) { animSpeed = it }
                    ParameterSlider(
                         "Highlight",
                         highlightIntensity,
@@ -122,8 +127,8 @@ fun FlowRibbonDebug() {
                     ParameterSlider(
                         "Rotation",
                         rotation,
-                        0f,
-                        10 * PI.toFloat()
+                        0.00f,
+                        10.0f
                     ) { rotation = it }
                     Spacer(modifier = Modifier.height(8.dp))
                     Button(onClick = { isAnimating = !isAnimating }) {
